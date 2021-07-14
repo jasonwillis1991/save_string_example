@@ -31,6 +31,7 @@ function print_string_table(){
 }
 
 $(function(){
+    print_string_table();
     $('#login_request_button').on("click",function(){
         log_in();
     })

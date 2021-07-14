@@ -1,6 +1,4 @@
 <?php
-    $ip_address = $_SERVER['REMOTE_ADDR'];
-    $expiration_date = '2021/12/01'; // random date
 
     // create db connection
     $DB_HOST = "localhost";
@@ -56,6 +54,7 @@
         $sql_get_string_list->execute();
         $db_data = $sql_get_string_list->get_result()->fetch_all(MYSQLI_ASSOC);
         $sql_get_string_list->close();
+
         // print table
         echo "<table class='table'>";
             echo "<thead>";
@@ -75,6 +74,6 @@
         echo "</table>";
 
     }else{
-        echo "how did you get here";
+        echo "Go back. You should only come to this page by clicking the submit button";
     }
 ?>
